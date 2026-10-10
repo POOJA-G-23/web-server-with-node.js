@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Node.js Express Static Web Server Demo - Delivering static HTML pages efficiently.">
+  <title>Node.js Static Web Server | Home</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo" id="brand-logo">
+        <div class="logo-badge">⚡</div>
+        <span>NodeExpress Static</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class="active" id="nav-home">Home</a></li>
+        <li><a href="/about" id="nav-about">About</a></li>
+        <li><a href="/contact" id="nav-contact">Contact</a></li>
+      </ul>
+      <div class="status-indicator">
+        <div class="status-dot"></div>
+        <span>Server Port: <strong>3000</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag-badge">🚀 Web Development Lab — Practical 01</div>
+      <h1>Serve Static HTML with <span class="gradient-text">Node.js & Express</span></h1>
+      <p>A lightweight, high-performance static web server built with Express.js to seamlessly deliver HTML, CSS, JavaScript, and assets directly to client browsers.</p>
+      <div class="btn-group">
+        <a href="/about" class="btn btn-primary" id="btn-explore-about">Explore Architecture</a>
+        <a href="/contact" class="btn btn-secondary" id="btn-contact-us">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="grid-cards">
+      <div class="card" id="card-express-static">
+        <div class="card-icon">📁</div>
+        <h3>express.static() Middleware</h3>
+        <p>Effortlessly serves all assets located in the <code>public</code> directory without requiring manual MIME type parsing or stream piping.</p>
+        <div class="card-code">app.use(express.static('public'));</div>
+      </div>
+
+      <div class="card" id="card-clean-routes">
+        <div class="card-icon">🌐</div>
+        <h3>Dedicated Route Handlers</h3>
+        <p>Specific endpoints map directly to clean URL routes using Express's <code>res.sendFile()</code> method for intuitive user navigation.</p>
+        <div class="card-code">res.sendFile(__dirname + '/public/about.html');</div>
+      </div>
+
+      <div class="card" id="card-async-performance">
+        <div class="card-icon">⚡</div>
+        <h3>Event-Driven Performance</h3>
+        <p>Powered by Node's asynchronous V8 engine, delivering non-blocking I/O and rapid response times for static web assets.</p>
+        <div class="card-code">app.listen(PORT, () => ...);</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Application Development Lab. Node.js Static Web Server.</p>
+      <div class="footer-routes">
+        <a href="/">Home</a>
+        <a href="/about.html">about.html</a>
+        <a href="/contact.html">contact.html</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
